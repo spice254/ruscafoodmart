@@ -7,8 +7,8 @@
         <div class="breadcrumb-wrap">
             <div class="container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'product-list' %}">Products</a></li>
                     <li class="breadcrumb-item active">Product List</li>
                 </ul>
             </div>
@@ -68,7 +68,7 @@
                             <div class="col-md-4">
                                 <div class="product-item">
                                     <div class="product-title">
-                                        <a href="#">Product Name</a>
+                                        <a href="{% static 'website/img/category-4.jpg' %}">Product Name</a>
                                         <div class="ratting">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="product-image">
                                         <a href="product_detail.html">
-                                            <img src="{static 'website/img/product-1.jpg' %}" alt="Product Image">
+                                            <img src="{% static 'website/img/category-4.jpg' %}" alt="Product Image">
                                         </a>
                                         <div class="product-action">
                                             <a href="#"><i class="fa fa-cart-plus"></i></a>

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+import os
 
 
 def home(request):
@@ -18,7 +19,7 @@ def contact(request):
                 message_subject,  # subject
                 message,  # message
                 message_email,  # from email
-                ['jamospice@gmail.com'],  # to emai
+                EMAIL_HOST_USER=os.environ.get('USER_EMAIL')  # to emai
         )
         return render(request, 'contact.html', {'message_name': message_name})
     else:

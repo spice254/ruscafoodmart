@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Contact RFM {% endblock %}
+{% block title %} Rusca FoodMart {% endblock %}
 {% block meta_description %}This is the website of Rusca FoodMart, for the best quality foodstuffs
 Don't be shy come and see for yourself{% endblock %}
 {% block content %}
@@ -12,28 +12,28 @@ Don't be shy come and see for yourself{% endblock %}
                         <nav class="navbar bg-light">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-home"></i>Home</a>
+                                    <a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home"></i>Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Best Selling</a>
+                                    <a class="nav-link" href="#"><i class="fa fa-blender"></i> Beverages</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals</a>
+                                    <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>Immune Boosters</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-female"></i>Fashion & Beauty</a>
+                                    <a class="nav-link" href="#"><i class="fa fa fa-hearbeaat"></i>Anti-Aging</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-child"></i>Kids & Babies Clothes</a>
+                                    <a class="nav-link" href="#"><i class="fa fa-running"></i>Fitness</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Women Clothes</a>
+                                    <a class="nav-link" href="#"><i class="fa fa-mug-tea"></i>Kienyeji Pourage</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Accessories</a>
+                                    <a class="nav-link" href="#"><i class="fas fa fa-glass-martini-alt"></i>Refreshments</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Electronics & Accessories</a>
+                                    <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Recepies</a>
                                 </li>
                             </ul>
                         </nav>
@@ -43,22 +43,22 @@ Don't be shy come and see for yourself{% endblock %}
                             <div class="header-slider-item">
                                 <img src="{% static 'website/img/slider-1.jpg' %}" alt="Slider Image" />
                                 <div class="header-slider-caption">
-                                    <p>Some text goes here that describes the image</p>
-                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                                    <p>pure ground pilau masala</p>
+                                    <a class="btn" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
                                 </div>
                             </div>
                             <div class="header-slider-item">
                                 <img src="{% static 'website/img/slider-2.jpg' %}" alt="Slider Image" />
                                 <div class="header-slider-caption">
-                                    <p>Some text goes here that describes the image</p>
-                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                                    <p>pure ground ginger (tangawizi)</p>
+                                    <a class="btn" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
                                 </div>
                             </div>
                             <div class="header-slider-item">
                                 <img src="{% static 'website/img/slider-3.jpg' %}" alt="Slider Image" />
                                 <div class="header-slider-caption">
-                                    <p>Some text goes here that describes the image</p>
-                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                                    <p>grounded hybiscus for anti-aging</p>
+                                    <a class="btn" href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i>Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -67,14 +67,15 @@ Don't be shy come and see for yourself{% endblock %}
                         <div class="header-img">
                             <div class="img-item">
                                 <img src="{% static 'website/img/category-1.jpg' %}" />
-                                <a class="img-text" href="">
-                                    <p>Some text goes here that describes the image</p>
+                                <a class="img-text" href="{% url 'cart' %}">
+                                    <p>pure grounded arrow roots with wheat for a healthy appetizer</p>
                                 </a>
                             </div>
                             <div class="img-item">
                                 <img src="{% static 'website/img/category-2.jpg' %}" />
-                                <a class="img-text" href="">
-                                    <p>Some text goes here that describes the image</p>
+                                <a class="img-text" href="{% url 'cart' %}">
+                                    <p>for the best quality refreshment after a long days work,
+                                        dates will get you the fine date after work</p>
                                 </a>
                             </div>
                         </div>
@@ -88,12 +89,12 @@ Don't be shy come and see for yourself{% endblock %}
         <div class="brand">
             <div class="container-fluid">
                 <div class="brand-slider">
-                    <div class="brand-item"><img src="img/brand-1.png" alt=""></div>
-                    <div class="brand-item"><img src="img/brand-2.png" alt=""></div>
-                    <div class="brand-item"><img src="img/brand-3.png" alt=""></div>
-                    <div class="brand-item"><img src="img/brand-4.png" alt=""></div>
-                    <div class="brand-item"><img src="img/brand-5.png" alt=""></div>
-                    <div class="brand-item"><img src="img/brand-6.png" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-1.png' %}" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-2.png' %}" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-3.png' %}" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-4.png' %}" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-5.png' %}" alt=""></div>
+                    <div class="brand-item"><img src="{% static 'website/img/brand-6.png' %}" alt=""></div>
                 </div>
             </div>
         </div>
